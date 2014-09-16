@@ -5,7 +5,7 @@ A simple notification component written in vanilla js. It has no dependencies.
 
 It is really simple to use:
 
-## First steps
+## HTML
 In the main html page:
 - Require the script by any mean (Example: `<script  type="text/javascript" src="gordon.js"></script>`)
 - Declare an html container in your html page.
@@ -13,7 +13,7 @@ In the main html page:
 <div class='gordonExamplContainer'></div>
 ```
 
-## Second steps
+## JavaScript
 Register the component in javascript.
 ```javascript
 var gordon = new Gordon();
