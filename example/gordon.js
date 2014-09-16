@@ -58,7 +58,8 @@ var Gordon = (function(config) {
     //Add a technical identifier.
     jsonMessage._id = util.guid();
     this.messages[jsonMessage._id] = jsonMessage;
-    //this.el.querySelector(this.selector).
+    //this.el.querySelector(this.selector). //ToDO: add a display on the go.
+    return this;
   };
 
 
@@ -116,7 +117,7 @@ module.exports = {
    */
   message: function(jsonMessage){
     console.log("message", jsonMessage);
-    return  "<div class='message' data-gordon-message='"+jsonMessage._id+"'><button data-close>&nbsp;</button><p>Message "+jsonMessage.content+"</p></div>";
+    return  "<div class='message' data-"+jsonMessage.type+" data-gordon-message='"+jsonMessage._id+"'><button data-close>x</button><p>Message "+jsonMessage.content+"</p></div>";
   },
 
   /**

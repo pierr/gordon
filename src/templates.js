@@ -6,7 +6,7 @@ module.exports = {
    */
   message: function(jsonMessage){
     console.log("message", jsonMessage);
-    return  "<div class='message' data-gordon-message='"+jsonMessage._id+"'><button data-close>&nbsp;</button><p>Message "+jsonMessage.content+"</p></div>";
+    return  "<div class='message' data-"+jsonMessage.type+" data-gordon-message='"+jsonMessage._id+"'><button data-close>x</button><p>Message "+jsonMessage.content+"</p></div>";
   },
 
   /**

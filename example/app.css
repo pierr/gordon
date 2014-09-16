@@ -1,0 +1,18 @@
+[data-error]{
+  color:white;
+  background-color: red;
+}
+
+[data-warning]{
+  color:black;
+  background-color: yellow;
+}
+[data-info]{
+  color: white;
+  background-color: blue;
+}
+[data-success]{
+  color: white;
+  background-color: green;
+
+}

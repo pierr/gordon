@@ -36,7 +36,8 @@ var Gordon = (function(config) {
     //Add a technical identifier.
     jsonMessage._id = util.guid();
     this.messages[jsonMessage._id] = jsonMessage;
-    //this.el.querySelector(this.selector).
+    //this.el.querySelector(this.selector). //ToDO: add a display on the go.
+    return this;
   };
 
 
