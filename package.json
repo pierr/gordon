@@ -1,0 +1,22 @@
+{
+  "name": "notifier",
+  "version": "0.0.0",
+  "description": "A simple notification component.",
+  "main": "dist/notifier.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierr/notifier.git"
+  },
+  "keywords": [
+    "notification"
+  ],
+  "author": "Pierre Besson <pierre.besson7@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pierr/notifier/issues"
+  },
+  "homepage": "https://github.com/pierr/notifier"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "notifier",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pierr/notifier",
+  "authors": [
+    "Pierre Besson <pierre.besson7@gmail.com>"
+  ],
+  "description": "A simple notification component.",
+  "main": "dist/notifier.js",
+  "keywords": [
+    "Notification"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
