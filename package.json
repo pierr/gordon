@@ -2,13 +2,13 @@
   "name": "notifier",
   "version": "0.0.0",
   "description": "A simple notification component.",
-  "main": "dist/notifier.js",
+  "main": "dist/gordon.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierr/notifier.git"
+    "url": "https://github.com/pierr/gordon.git"
   },
   "keywords": [
     "notification"
@@ -16,7 +16,11 @@
   "author": "Pierre Besson <pierre.besson7@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pierr/notifier/issues"
+    "url": "https://github.com/pierr/gordon/issues"
   },
-  "homepage": "https://github.com/pierr/notifier"
+  "homepage": "https://github.com/pierr/gordon",
+  "dependencies": {
+    "browserify": "^5.11.2",
+    "gulp": "^3.8.8"
+  }
 }

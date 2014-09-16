@@ -1,12 +1,12 @@
 {
-  "name": "notifier",
+  "name": "gordon",
   "version": "0.0.0",
-  "homepage": "https://github.com/pierr/notifier",
+  "homepage": "https://github.com/pierr/gordon",
   "authors": [
     "Pierre Besson <pierre.besson7@gmail.com>"
   ],
   "description": "A simple notification component.",
-  "main": "dist/notifier.js",
+  "main": "dist/gordon.js",
   "keywords": [
     "Notification"
   ],
