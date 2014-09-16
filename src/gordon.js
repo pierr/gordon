@@ -1,6 +1,7 @@
 //dependencies
 var templates = require('./templates');
 var util = require('./util');
+var events = require('./events');
 
 /**
  * Gordon class.
@@ -14,8 +15,9 @@ var Gordon = (function(config) {
    * @param {object} options - Options available for the component.
    */
   function Gordon(options) {
+    options = options || {};
     this.selector = options.selector || "div[data-gordon-messages]";
-    this.containerTemplate = options.containerTemplate || templates.containerTemplate;
+    this.containerTemplate = options.containerTemplate || templates.container;
     this.messageTemplate = options.messageTemplate || templates.message;
     this.closeButtonSelector = options.closeButtonSelector || "[data-close]";
     this.messages = {};
@@ -34,6 +36,7 @@ var Gordon = (function(config) {
     //Add a technical identifier.
     jsonMessage._id = util.guid();
     this.messages[jsonMessage._id] = jsonMessage;
+    //this.el.querySelector(this.selector).
   };
 
 
@@ -44,7 +47,8 @@ var Gordon = (function(config) {
   Gordon.prototype.registerEvents = function() {
     var closeButtons = this.el.querySelectorAll(this.closeButtonSelector);
     var gordon = this;
-    [].prototype.forEach(function(closeButton) {
+    //Register all button clicks.
+    Array.prototype.forEach.call(closeButtons, function(closeButton) {
       closeButton.addEventListener('click', events.closeButton, false);
     });
     //Register an event to update the data state.
@@ -57,7 +61,7 @@ var Gordon = (function(config) {
     //Delete the data.
     delete this.messages[msgInternalId];
      //Delete the HTML.
-    util.removeNode(util.getClosest('[data-gordon-message="'+msgInternalId+'"]');
+    util.removeElement(this.el.querySelector('[data-gordon-message="'+msgInternalId+'"]'));
   }
   /**
    * Inject html from the data into the component.
@@ -68,7 +72,7 @@ var Gordon = (function(config) {
     var messagesContainer = this.el.querySelector(this.selector);
     var htmlMessages = "";
     for (var message in this.messages) {
-      htmlMessages = htmlMessages + this.messageTemplate(message);
+      htmlMessages = htmlMessages + this.messageTemplate(this.messages[message]);
     }
     messagesContainer.innerHTML = htmlMessages;
     this.registerEvents();

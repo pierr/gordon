@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Drig example.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="app.css">
+        <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="gordon.js"></script>
+    </head>
+    <body>
+        <h1>Gordon example</h1>
+        <div class='gordonExamplContainer'></div>
+        <script type="text/javascript">
+            var gordon = new Gordon();
+            gordon.add({type: "warning", content: "hello"});
+            gordon.add({type: "warning", content: "hello2"});
+            document.querySelector('.gordonExamplContainer').appendChild(gordon.render().el);
+        </script>
+    </body>
+</html>

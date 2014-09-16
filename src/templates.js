@@ -5,7 +5,8 @@ module.exports = {
    * @return {string} - The generated HTML.
    */
   message: function(jsonMessage){
-    return  "<div class='message' data-gordon-message='"+jsonMessage._id+"'><button data-close>&nbsp;</button><p>Message "+jsonMessage._id+"</p></div>";
+    console.log("message", jsonMessage);
+    return  "<div class='message' data-gordon-message='"+jsonMessage._id+"'><button data-close>&nbsp;</button><p>Message "+jsonMessage.content+"</p></div>";
   },
 
   /**

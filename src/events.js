@@ -8,8 +8,8 @@ var events = {
   closeButton: function closeButtonEventHandler(e){
     console.log("close button context",this);
     e.preventDefault();
-    var eventEmitter = util.getClosest('[data-gordon]');
-    eventEmitter.dispatchEvent(new CustomEvent("message:close", {detail: this.getAttribute('data-gordon-message')}));
+    var eventEmitter = this.parentElement.parentElement.parentElement;// util.getClosest(this,'[data-gordon]');
+    eventEmitter.dispatchEvent(new CustomEvent("message:close", {detail: this.parentElement.getAttribute('data-gordon-message')}));
   }
 };
 
