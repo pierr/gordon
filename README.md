@@ -25,4 +25,4 @@ document.querySelector('.gordonExamplContainer').appendChild(gordon.render().el)
 ```
 
 ## API
-- add: Add a message in the gordon container.
+- add: Add a message in the gordon container. There are two types of messages: permanent and not permanent.
